@@ -1,0 +1,37 @@
+.header{ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #5be7d8;
+    box-shadow: 1px 0px 1px;
+
+}
+
+.htitle{
+    font-size: 25px;
+    color: #058778;
+}
+
+.nav ul{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.nav ul li{
+    list-style: none;
+    padding: 10px;
+    
+
+}
+
+.nav ul li{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.nav ul li:hover{
+    background-color: #058778;
+}

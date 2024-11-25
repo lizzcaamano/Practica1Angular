@@ -1,0 +1,68 @@
+<div  class="container container-fluid">
+    <h2>Formulario de Inscripción</h2>
+    <form>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+        <div class="col">
+        <div data-mdb-input-init class="form-outline">
+        <input type="text" id="form6Example1" class="form-control" #name />
+        <label class="form-label" for="form6Example1">Nombres</label>
+        </div>
+        </div>
+        <div class="col">
+        <div data-mdb-input-init class="form-outline">
+        <input type="text" id="form6Example2" class="form-control" #lastname />
+        <label class="form-label" for="form6Example2">Apellidos</label>
+        </div>
+        </div>
+        </div>
+         
+          <!-- Text input -->
+        <div data-mdb-input-init class="form-outline mb-4" >
+        <input type="text" name="direction" [(ngModel)]="dir" id="form6Example3" class="form-control" #addres  />
+        <label class="form-label" for="form6Example3">Dirección {{dir}}</label>
+        
+        </div>
+         
+          <!-- Text input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+        <input type="number" id="form6Example4" class="form-control" #age/>
+        <label class="form-label" for="form6Example4">Edad</label>
+        </div>
+         
+
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-check-label" for="form6Example8">Lista de cursos </label>
+      <select class="form-control" #course>
+        <option selected>
+          Seleccionar un Curso....
+        </option>
+        <option [value]="item" *ngFor="let item of getCourses()">
+            {{item}}
+          </option>
+      </select>
+        </div>
+         
+         
+         
+          <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+        <input
+              class="form-check-input me-2"
+              type="checkbox"
+              value=""
+              id="form6Example8"
+              checked
+            />
+        <label class="form-check-label" for="form6Example8"> Crear cuenta? </label>
+        </div>
+
+        
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-check-label" for="form6Example8">{{getResponse()}} </label>
+         </div>
+         
+          <!-- Submit button -->
+          <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4" (click)="getRegisterCoursePerson(name.value,lastname.value,addres.value,age.value,course.value)">Registrar</button>
+        </form>
+</div>
